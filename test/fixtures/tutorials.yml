@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course: MyString
+  location: MyString
+  capacity: 1
+  start_date: 2015-04-13 16:35:16
+  end_date: 2015-04-13 16:35:16
+  comments: MyText
+  original_professor: MyString
+  tutor_id: 
+
+two:
+  course: MyString
+  location: MyString
+  capacity: 1
+  start_date: 2015-04-13 16:35:16
+  end_date: 2015-04-13 16:35:16
+  comments: MyText
+  original_professor: MyString
+  tutor_id: 

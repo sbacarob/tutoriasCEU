@@ -53,4 +53,11 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :students, only: [:show, :update] do
+    resources :assigned_tutorials
+  end
+
+  resources :tutorials, only: [:show, :update, :destroy]
+
 end

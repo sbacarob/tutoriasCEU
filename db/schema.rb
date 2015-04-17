@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413234014) do
+ActiveRecord::Schema.define(version: 20150417134740) do
+
+  create_table "achievements", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "achievements_students", id: false, force: true do |t|
+    t.integer "student_id",     null: false
+    t.integer "achievement_id", null: false
+  end
+
+  add_index "achievements_students", ["achievement_id"], name: "index_achievements_students_on_achievement_id"
+  add_index "achievements_students", ["student_id"], name: "index_achievements_students_on_student_id"
 
   create_table "students", force: true do |t|
     t.string   "login"

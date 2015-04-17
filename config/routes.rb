@@ -56,8 +56,10 @@ Rails.application.routes.draw do
 
   resources :students, only: [:show, :update] do
     resources :assigned_tutorials
+    resources :acquired_achievements, only: :show
   end
 
   resources :tutorials, only: [:show, :update, :destroy]
 
+  resources :achievements
 end

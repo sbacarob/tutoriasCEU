@@ -15,6 +15,9 @@
 /log/*.log
 /tmp
 
-/.ruby-gemset
-/.ruby-version
-/.idea
+#Ignore .idea folder
+.idea/
+
+# Ignore specific ruby gemset and version
+.ruby-gemset
+.ruby-version

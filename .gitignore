@@ -15,5 +15,9 @@
 /log/*.log
 /tmp
 
+#Ignore .idea folder
 .idea/
-.idea/workspace.xml
+
+# Ignore specific ruby gemset and version
+.ruby-gemset
+.ruby-version

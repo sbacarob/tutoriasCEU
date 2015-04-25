@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413234014) do
+ActiveRecord::Schema.define(version: 20150416233206) do
 
   create_table "students", force: true do |t|
     t.string   "login"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150413234014) do
     t.integer  "tutor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
   end
 
   add_index "tutorials", ["course"], name: "index_tutorials_on_course"

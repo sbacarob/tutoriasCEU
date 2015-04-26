@@ -12,6 +12,10 @@ class TutorialsController < ApplicationController
     respond_with Tutorial.find(params[:id]).students<<current_student
   end
 
+  def search_by_course
+    respond_with Tutorial.find_by_course_and_status(course: params[:course_name], status: 'ACTIVA')
+  end
+
   private
 
     def tutorial_params

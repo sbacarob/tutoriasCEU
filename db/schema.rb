@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417134740) do
+ActiveRecord::Schema.define(version: 20150426184242) do
 
   create_table "achievements", force: true do |t|
     t.string   "name"
@@ -30,16 +30,26 @@ ActiveRecord::Schema.define(version: 20150417134740) do
   add_index "achievements_students", ["student_id"], name: "index_achievements_students_on_student_id"
 
   create_table "students", force: true do |t|
-    t.string   "login"
     t.string   "name"
     t.string   "major"
     t.string   "tutor_rating"
     t.string   "student_rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
-  add_index "students", ["login"], name: "index_students_on_login", unique: true
+  add_index "students", ["email"], name: "index_students_on_email", unique: true
+  add_index "students", ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
 
   create_table "students_tutorials", id: false, force: true do |t|
     t.integer "student_id",  null: false

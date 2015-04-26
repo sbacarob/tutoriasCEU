@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :students
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,6 +54,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  root to: 'application#angular'
 
   resources :students, only: [:show, :update] do
     resources :assigned_tutorials, only: [:index, :create, :show, :update, :destroy]

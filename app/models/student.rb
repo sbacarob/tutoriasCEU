@@ -8,6 +8,6 @@ class Student < ActiveRecord::Base
   has_and_belongs_to_many :acquired_achievements, class_name: 'Achievement', autosave: true
 
   def as_json( options = {})
-    super( options.merge( include: [:assigned_tutorials, :booked_tutorials, :acquired_achievements]))
+    super( options.merge( only: [:id, :name, :major, :tutor_rating, :student_rating, :email], include: [:assigned_tutorials, :booked_tutorials, :acquired_achievements]))
   end
 end

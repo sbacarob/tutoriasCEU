@@ -8,6 +8,10 @@ class TutorialsController < ApplicationController
     respond_with Tutorial.find(params[:id])
   end
 
+  def add_student
+    respond_with Tutorial.find(params[:id]).students<<current_student
+  end
+
   private
 
     def tutorial_params

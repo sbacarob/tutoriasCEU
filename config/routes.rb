@@ -55,11 +55,11 @@ Rails.application.routes.draw do
   #   end
 
   resources :students, only: [:show, :update] do
-    resources :assigned_tutorials
+    resources :assigned_tutorials, only: [:index, :create, :show, :update, :destroy]
     resources :acquired_achievements, only: :show
   end
 
-  resources :tutorials, only: [:show, :update, :destroy]
+  resources :tutorials, only: [:index, :show]
 
   resources :achievements
 end

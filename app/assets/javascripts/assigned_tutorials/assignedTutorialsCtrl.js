@@ -7,4 +7,9 @@ angular.module('tutoriasCEU')
 
 
 
+            $scope.create = function() {
+                assignedTutorials.create($scope.newTutorial);
+                //$scope.newTutorial.title = {};
+            }
+
         }])

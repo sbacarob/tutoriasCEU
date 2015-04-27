@@ -13,9 +13,9 @@ angular.module('tutoriasCEU')
                 })
             }
 
-            o.create = function() {
-                return $http.post('/assigned_tutorials.json').success(function(data) {
-
+            o.create = function(tutorial) {
+                return $http.post('/assigned_tutorials.json', tutorial).success(function(data) {
+                    o.tutorials.push(data);
                 })
             }
 

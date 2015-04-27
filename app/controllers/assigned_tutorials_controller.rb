@@ -22,6 +22,6 @@ class AssignedTutorialsController < ApplicationController
 
   private
   def tutorial_params
-    params.require(:tutorial).permit(:course, :location, :capacity, :start_date, :end_date, :comments, :original_professor)
+    params.require(:assigned_tutorial).permit(:course, :location, :capacity, :start_date, :end_date, :comments, :original_professor)
   end
 end

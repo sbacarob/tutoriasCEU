@@ -57,14 +57,14 @@ Rails.application.routes.draw do
 
   root to: 'application#angular'
 
-  resources :students, only: [:show, :update] do
-    resources :assigned_tutorials, only: [:index, :create, :show, :update, :destroy]
-    resources :acquired_achievements, only: :show
-  end
+  resources :assigned_tutorials, only: [:index, :create, :show, :update, :destroy]
+  resources :acquired_achievements, only: :show
+
+
 
   resources :tutorials, only: [:index, :show] do
     member do
-      put '/add_student', to: 'tutorials#add_student'
+      post '/add_student', to: 'tutorials#add_student'
     end
 
     get '/search_by_course/:course_name', to: 'tutorials#search_by_course'

@@ -30,3 +30,7 @@ gem 'sdoc', '~> 0.4.0',        group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'devise', '~> 3.4.0'
+
+gem 'angular-rails-templates'
+
+gem 'angular_rails_csrf'

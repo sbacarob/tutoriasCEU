@@ -1,5 +1,9 @@
+//= require jquery
 //= require angular
+//= require angular-rails-templates
 //= require angular-ui-router
+//= require angular-bootstrap
+//= require angular-devise
 //= require bootstrap/dist/js/bootstrap.js
 //= require jquery.prettyPhoto.js
 //= require jquery.isotope.min.js

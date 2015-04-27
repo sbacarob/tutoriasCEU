@@ -1,12 +1,12 @@
 //= require angular
 //= require angular-ui-router
 //= require bootstrap/dist/js/bootstrap.js
-//= require javascripts/jquery.prettyPhoto.js
-//= require javascripts/jquery.isotope.min.js
-//= require javascripts/main.js
-//= require javascripts/wow.min.js
-//= require javascripts/html5shiv.js
-//= require javascripts/respond.min.js
+//= require jquery.prettyPhoto.js
+//= require jquery.isotope.min.js
+//= require main.js
+//= require wow.min.js
+//= require html5shiv.js
+//= require respond.min.js
 
 //= require_tree .
 

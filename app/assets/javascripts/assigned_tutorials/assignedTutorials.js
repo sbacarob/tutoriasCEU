@@ -8,7 +8,7 @@ angular.module('tutoriasCEU')
             };
 
             o.getAll = function() {
-                return $http.get('/assigned_tutorials.json').success(function(res){
+                return $http.get('/assigned_tutorials.json').then(function(res){
                     return res.data
                 })
             }

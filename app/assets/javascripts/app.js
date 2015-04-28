@@ -49,11 +49,9 @@ angular.module('tutoriasCEU', ['ui.router', 'ui.bootstrap', 'templates', 'Devise
                     templateUrl: 'tutorials/_tutorials.html',
                     controller: 'TutorialsCtrl',
                     resolve: {
-                        tutorialsPromise: function(Auth) {
-                            return Auth.currentUser().then(function (student) {
-                                return student.assigned_tutorials
-                            })
-                        }
+                        tutorialsPromise: ['assignedTutorials', function(assignedTutorials) {
+                            return assignedTutorials.getAll();
+                        }]
                     }
                 })
 

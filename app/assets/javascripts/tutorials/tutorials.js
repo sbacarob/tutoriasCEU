@@ -8,8 +8,8 @@ angular.module('tutoriasCEU')
             };
 
             o.getAll = function() {
-                return $http.get('/assigned_tutorials.json').success(function(data){
-                    angular.copy(data, o.tutorials)
+                return $http.get('/tutorials.json').then(function(res){
+                    return res.data
                 })
             }
 
@@ -19,15 +19,15 @@ angular.module('tutoriasCEU')
                 });
             }
 
-            o.add_student = function(id) {
+            o.addStudent = function(id) {
                 return $http.post('tutorials/'+id+'/add_student.json').then(function(res){
                     return res.data;
                 });
             }
 
-            o.search_by_course = function(courseName) {
-                return $http.get('tutorials/search_by_course/'+courseName).then(function(data){
-                    angular.copy(data, o.tutorials)
+            o.searchByCourse = function(courseName) {
+                return $http.get('tutorials/search_by_course/'+courseName+'.json').then(function(res){
+                    return res.data
                 })
             }
 

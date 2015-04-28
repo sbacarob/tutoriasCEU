@@ -66,9 +66,10 @@ Rails.application.routes.draw do
     member do
       post '/add_student', to: 'tutorials#add_student'
     end
-
-    get '/search_by_course/:course_name', to: 'tutorials#search_by_course'
   end
+
+
+  get 'tutorials/search_by_course/:course_name', to: 'tutorials#search_by_course'
 
   resources :achievements
 end

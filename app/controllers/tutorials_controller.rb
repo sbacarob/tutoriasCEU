@@ -13,7 +13,7 @@ class TutorialsController < ApplicationController
   end
 
   def search_by_course
-    respond_with Tutorial.find_by_course_and_status(course: params[:course_name], status: 'ACTIVA')
+    respond_with Tutorial.where(course: params[:course_name], status: 'ACTIVA')
   end
 
   private

@@ -3,7 +3,10 @@ angular.module('tutoriasCEU')
         '$scope',
         'Auth',
         '$modal',
-        function($scope, Auth, $modal){
+        '$state',
+        function($scope, Auth, $modal, $state){
+
+            $scope.state = $state;
 
             $scope.openLogin = function () {
 
@@ -30,6 +33,7 @@ angular.module('tutoriasCEU')
 
             $scope.$on('devise:logout', function (e, student){
                 $scope.student = {};
+                $state.go('home');
             });
 
         }]);

@@ -2,8 +2,8 @@
     <br>
     <div class="bs-example bs-example-tabs">
         <ul id="myTab" class="nav nav-tabs">
-            <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
-            <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+            <li class="active"><a href="#signin" data-toggle="tab">Ingresar</a></li>
+            <li class=""><a href="#signup" data-toggle="tab">Registrarse</a></li>
         </ul>
     </div>
     <div class="modal-body">
@@ -32,7 +32,7 @@
                         <div class="control-group">
                             <label class="control-label" for="signin"></label>
                             <div class="controls">
-                                <button id="confirmsignin" name="signin" class="btn btn-success" ng-click="login()">Sign In</button>
+                                <button id="confirmsignin" name="signin" class="btn btn-success" ng-click="login()">Ingresar</button>
                             </div>
                         </div>
                     </fieldset>
@@ -44,7 +44,7 @@
                         <!-- Sign Up Form -->
                         <!-- Text input-->
                         <div class="control-group">
-                            <label class="control-label" for="Email">Email:</label>
+                            <label class="control-label" for="Email">Correo:</label>
                             <div class="controls">
                                 <input id="Email" name="Email" class="form-control" type="text" placeholder="Correo (sin @uniandes.edu.co)" class="input-large" required="" ng-model="student.email">
                             </div>
@@ -59,18 +59,17 @@
 
                         <!-- Password input-->
                         <div class="control-group">
-                            <label class="control-label" for="password">Password:</label>
+                            <label class="control-label" for="password">Contraseña:</label>
                             <div class="controls">
-                                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="" ng-model="student.password">
-                                <em>1-8 Characters</em>
+                                <input id="password" name="password" class="form-control" type="password" placeholder="1-8 caracteres" class="input-large" required="" ng-model="student.password">
                             </div>
                         </div>
 
                         <!-- Text input-->
                         <div class="control-group">
-                            <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                            <label class="control-label" for="reenterpassword">Confirmar contraseña:</label>
                             <div class="controls">
-                                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="" ng-model="student.password_confirmation">
+                                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="Ingresar de nuevo la contraseña" class="input-large" required="" ng-model="student.password_confirmation">
                             </div>
                         </div>
 
@@ -86,7 +85,7 @@
                         <div class="control-group">
                             <label class="control-label" for="confirmsignup"></label>
                             <div class="controls">
-                                <button id="confirmsignup" name="confirmsignup" class="btn btn-success" ng-click="register()">Sign Up</button>
+                                <button id="confirmsignup" name="confirmsignup" class="btn btn-success" ng-click="register()">Registrarse</button>
                             </div>
                         </div>
                     </fieldset>
@@ -96,7 +95,7 @@
     </div>
     <div class="modal-footer">
         <center>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </center>
     </div>
 </div>

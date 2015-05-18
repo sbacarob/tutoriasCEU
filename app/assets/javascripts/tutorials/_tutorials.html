@@ -1,1 +1,46 @@
-<div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="row">
+            <div class="input-group">
+                <input type="text" ng-model="searchValue" class="form-control" placeholder="Buscar por curso...">
+            <span class="input-group-btn">
+                <a ng-href="#/search_tutorials/{{searchValue}}" class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+            </span>
+            </div><!-- /input-group -->
+        </div>
+        <p></p>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <div class="panel-title">Información de la tutoría</div>
+                </div>
+
+                <!-- List group -->
+                <ul ng-show="selectedTutorial" class="list-group">
+                    <li class="list-group-item">Curso: {{selectedTutorial.course}}</li>
+                    <li class="list-group-item">Tutor: {{selectedTutorial.tutor.name}}</li>
+                    <li class="list-group-item">Lugar: {{selectedTutorial.location}}</li>
+                    <li class="list-group-item">Profesor del tutor: {{selectedTutorial.original_professor}}</li>
+                    <li class="list-group-item">Fecha: {{selectedTutorialStartDate.toLocaleDateString()}}</li>
+                    <li class="list-group-item">Hora de inicio: {{selectedTutorialStartDate.toLocaleTimeString()}}</li>
+                    <li class="list-group-item">Hora de finalización: {{selectedTutorialEndDate.toLocaleTimeString()}}</li>
+                </ul>
+
+                <div ng-hide="selectedTutorial" class="panel-body"> No has hecho click en ninguna tutoría</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-9">
+        <div ui-calendar="uiConfig.calendar" class="span9 calendar" ng-model="eventSources"></div>
+    </div>
+
+
+</div>

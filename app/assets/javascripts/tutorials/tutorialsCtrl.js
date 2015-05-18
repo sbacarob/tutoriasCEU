@@ -34,12 +34,14 @@ angular.module('tutoriasCEU')
             }
 
             $scope.alertOnEventClick = function( event, jsEvent, view){
-                var selcTut = $scope.tutorials[event.id];
-                console.log(selcTut);
+                $scope.selectedTutorial = $scope.tutorials[event.id];
+                $scope.selectedTutorialStartDate = new Date($scope.selectedTutorial.start_date);
+                $scope.selectedTutorialEndDate = new Date($scope.selectedTutorial.end_date);
             };
 
             $scope.uiConfig = {
                 calendar:{
+                    lang: 'es',
                     height: 450,
                     editable: true,
                     header:{

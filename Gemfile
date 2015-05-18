@@ -33,6 +33,8 @@ gem 'angular-rails-templates'
 
 gem 'angular_rails_csrf'
 
+gem 'font-awesome-rails'
+
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
